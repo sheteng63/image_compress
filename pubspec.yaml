@@ -1,7 +1,7 @@
 name: image_compress
 description: A new flutter plugin project.
 version: 0.0.1
-author: sheteng@live.cn
+author: sheteng <sheteng@live.cn>
 homepage: https://github.com/sheteng63/image_compress
 
 environment:
