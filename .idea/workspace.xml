@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="08e521a8-d559-4228-9cd7-5d85bb2eb527" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/example/imagecompress/ImageCompressPlugin.java" afterPath="$PROJECT_DIR$/android/src/main/java/com/example/imagecompress/ImageCompressPlugin.java" />
       <change beforePath="$PROJECT_DIR$/example/android/gradlew.bat" afterPath="$PROJECT_DIR$/example/android/gradlew.bat" />
-      <change beforePath="$PROJECT_DIR$/lib/image_compress.dart" afterPath="$PROJECT_DIR$/lib/image_compress.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -24,7 +24,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="image_compress.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="image_compress.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/image_compress.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="299">
@@ -32,6 +32,16 @@
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageCompressPlugin.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/android/src/main/java/com/example/imagecompress/ImageCompressPlugin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="64" column="53" lean-forward="false" selection-start-line="64" selection-start-column="53" selection-end-line="64" selection-end-column="53" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,13 +93,13 @@
         <option value="$PROJECT_DIR$/example/.gitignore" />
         <option value="$PROJECT_DIR$/example/pubspec.yaml" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/android/src/main/java/com/example/imagecompress/ImageCompressPlugin.java" />
         <option value="$PROJECT_DIR$/LICENSE" />
         <option value="$PROJECT_DIR$/example/ios/Runner/AppDelegate.m" />
         <option value="$PROJECT_DIR$/example/lib/main.dart" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/lib/image_compress.dart" />
+        <option value="$PROJECT_DIR$/android/src/main/java/com/example/imagecompress/ImageCompressPlugin.java" />
       </list>
     </option>
   </component>
@@ -325,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534743989111</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="写入文件字节数组">
+      <created>1534745086984</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1534745086984</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -374,7 +391,8 @@
     <MESSAGE value="初始化" />
     <MESSAGE value="修改readme" />
     <MESSAGE value="增加写到文件的方法" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加写到文件的方法" />
+    <MESSAGE value="写入文件字节数组" />
+    <option name="LAST_COMMIT_MESSAGE" value="写入文件字节数组" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -602,14 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/android/src/main/java/com/example/imagecompress/ImageCompressPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="62" column="33" lean-forward="false" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -668,6 +678,14 @@
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/src/main/java/com/example/imagecompress/ImageCompressPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="64" column="53" lean-forward="false" selection-start-line="64" selection-start-column="53" selection-end-line="64" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
