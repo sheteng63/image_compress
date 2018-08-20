@@ -29,7 +29,7 @@ class ImageCompress {
       {rate = 1, width = 500, height = 500}) async {
     var res = await _channel.invokeMethod("compressImage",
         {"path": path, "rate": rate, "width": width, "height": height});
-    await (await file).writeAsString(res);
+    await (await file).writeAsBytes(res);
 
   }
 
