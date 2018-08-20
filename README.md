@@ -2,9 +2,11 @@
 
 a simple jepg image compress plugins
 
-## Getting Started
+## Install
+>image_compress:
+>      git:
+>        url: https://github.com/sheteng63/image_compress.git
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
-
-For help on editing plugin code, view the [documentation](https://flutter.io/developing-packages/#edit-plugin-package).
+## Example
+> import 'package:image_compress/image_compress.dart';
+> var memory = await ImageCompress.compressImageToMemory(path);
