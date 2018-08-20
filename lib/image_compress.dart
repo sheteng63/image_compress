@@ -13,7 +13,7 @@ class ImageCompress {
    * return: new image memory
    */
   static Future<List<int>> compressImageToMemory(String path,
-      {rate = 1, width = 500, height = 500}) async {
+      {rate = 1.0, width = 500.0, height = 500.0}) async {
     return await _channel.invokeMethod("compressImage",
         {"path": path, "rate": rate, "width": width, "height": height});
   }
@@ -29,7 +29,7 @@ class ImageCompress {
       {rate = 1, width = 500, height = 500}) async {
     var res = await _channel.invokeMethod("compressImage",
         {"path": path, "rate": rate, "width": width, "height": height});
-    await (await file).writeAsBytes(res);
+    await file.writeAsBytes(res);
 
   }
 
