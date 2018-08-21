@@ -37,26 +37,56 @@ public class ImageCompressPlugin implements MethodCallHandler {
         }
     }
 
-    private byte[] getimage(String srcPath, double width, double height, double rate) {
+    private byte[] getimage(String srcPath, double Dwidth, double Dheight, double rate) {
         BitmapFactory.Options newOpts = new BitmapFactory.Options();
         //开始读入图片，此时把options.inJustDecodeBounds 设回true了
         newOpts.inJustDecodeBounds = true;
         Bitmap bitmap = BitmapFactory.decodeFile(srcPath, newOpts);//此时返回bm为空
 
         newOpts.inJustDecodeBounds = false;
-        int w = newOpts.outWidth;
-        int h = newOpts.outHeight;
+        int width = newOpts.outWidth;
+        int height = newOpts.outHeight;
         //现在主流手机比较多是800*480分辨率，所以高和宽我们设置为//这里设置宽度为480f
         //缩放比。由于是固定比例缩放，只用高或者宽其中一个数据进行计算即可
-        int be = 1;//be=1表示不缩放
-        if (w > h && w > width) {//如果宽度大的话根据宽度固定大小缩放
-            be = (int) (newOpts.outWidth / width);
-        } else if (w < h && h > height) {//如果高度高的话根据宽度固定大小缩放
-            be = (int) (newOpts.outHeight / height);
+        double be = 1;//be=1表示不缩放
+        if (Dwidth == 0.0 || Dheight == 0.0) {
+            if (width > 1280 || height > 1280) {
+                if (width > height) {
+                    be = height / width;
+                    width = 1280;
+                    height = (int) (width * be);
+                } else {
+                    be = width / height;
+                    height = 1280;
+                    width = (int) (height * be);
+                }
+                //2.宽大于1280高小于1280
+            } else if (width > 1280 || height < 1280) {
+                be = height / width;
+                width = 1280;
+                height = (int) (width * be);
+                //3.宽小于1280高大于1280
+            } else if (width < 1280 || height > 1280) {
+                be = width / height;
+                height = 1280;
+                width = (int) (height * be);
+                //4.宽高都小于1280
+            } else {
+            }
+
+        } else if (Dwidth < width && Dheight < height) {
+            if (Dwidth / width > Dheight / height) {
+                be = Dwidth / width;
+            } else {
+                be = Dheight / height;
+            }
         }
-        if (be <= 0)
+
+        if (be <= 0) {
             be = 1;
-        newOpts.inSampleSize = be;//设置缩放比例
+        }
+        //设置缩放比例
+        newOpts.inSampleSize = (int) be;
         //重新读入图片，注意此时已经把options.inJustDecodeBounds 设回false了
         bitmap = BitmapFactory.decodeFile(srcPath, newOpts);
         return compressImage(bitmap, rate);//压缩好比例大小后再进行质量压缩
